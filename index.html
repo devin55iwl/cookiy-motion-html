@@ -57,10 +57,328 @@
       .hero {
         padding-top: 64px;
         padding-bottom: 58px;
+        background:
+          linear-gradient(rgba(17, 17, 17, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(17, 17, 17, 0.035) 1px, transparent 1px),
+          var(--paper);
+        background-size: 56px 56px;
       }
 
       .hero-grid {
         display: block;
+      }
+
+      .personal-frame {
+        padding-bottom: 54px;
+        border-top: 1px solid rgba(17, 17, 17, 0.72);
+        border-bottom: 1px solid rgba(17, 17, 17, 0.72);
+      }
+
+      .personal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding-block: 24px 34px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .personal-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+        gap: 56px;
+        align-items: stretch;
+        padding-top: 22px;
+      }
+
+      .personal-copy {
+        min-height: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .personal-kicker {
+        margin: 0 0 24px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .personal-title {
+        max-width: 640px;
+        font-size: clamp(58px, 7vw, 88px);
+        line-height: 0.96;
+        letter-spacing: -4.2px;
+        font-weight: 560;
+      }
+
+      .identity {
+        max-width: 520px;
+        margin: 22px 0 0;
+        color: var(--ink);
+        font-size: clamp(22px, 2.4vw, 30px);
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        font-weight: 500;
+      }
+
+      .studio-rule {
+        width: 100%;
+        height: 1px;
+        margin: 30px 0 26px;
+        background: rgba(17, 17, 17, 0.18);
+      }
+
+      .personal-subheadline {
+        max-width: 540px;
+        margin: 0;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1.55;
+        font-weight: 600;
+      }
+
+      .progress-block {
+        max-width: 520px;
+        margin-top: 42px;
+      }
+
+      .progress-meta {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .progress-track {
+        position: relative;
+        height: 1px;
+        margin-top: 12px;
+        background: rgba(17, 17, 17, 0.18);
+      }
+
+      .progress-track span {
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 68%;
+        background: var(--ink);
+      }
+
+      .progress-block p {
+        display: inline-block;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        margin: 14px 0 0;
+        padding: 2px 5px;
+        color: var(--ink);
+        background: #dfff4f;
+        font-size: 13px;
+        line-height: 1.65;
+        font-weight: 650;
+      }
+
+      .studio-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+      }
+
+      .studio-button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border: 1px solid var(--ink);
+        color: var(--paper);
+        background: var(--ink);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 220ms var(--ease), background 220ms var(--ease), color 220ms var(--ease);
+      }
+
+      .studio-button:hover {
+        color: var(--ink);
+        background: transparent;
+        transform: translateY(-2px);
+      }
+
+      .studio-button.secondary {
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .studio-button.secondary:hover {
+        color: var(--paper);
+        background: var(--ink);
+      }
+
+      .note-stack {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        height: 470px;
+        align-self: center;
+        justify-self: end;
+      }
+
+      .note-stack::before,
+      .note-stack::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        background: rgba(255, 253, 248, 0.45);
+        pointer-events: none;
+      }
+
+      .note-stack::before {
+        transform: translate(10px, 10px);
+      }
+
+      .note-stack::after {
+        transform: translate(20px, 20px);
+        opacity: 0.62;
+      }
+
+      .insight-card {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(17, 17, 17, 0.1);
+        background:
+          linear-gradient(rgba(17, 17, 17, 0.025) 1px, transparent 1px),
+          rgba(255, 253, 248, 0.76);
+        background-size: 100% 34px;
+        padding: 24px;
+        box-shadow: 0 1px 0 rgba(17, 17, 17, 0.04);
+        transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+      }
+
+      .note-slip-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--ink);
+      }
+
+      .note-slip-header span,
+      .question span,
+      .note-controls button,
+      .note-controls span {
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .note-label {
+        margin: 22px 0 0;
+        color: var(--ink);
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 650;
+        letter-spacing: -0.015em;
+      }
+
+      .note {
+        min-height: 158px;
+        margin: 36px 0 0;
+        color: var(--ink);
+        font-size: clamp(20px, 2vw, 24px);
+        line-height: 1.24;
+        letter-spacing: -0.02em;
+        font-weight: 620;
+      }
+
+      .question {
+        margin-top: auto;
+        padding-top: 18px;
+        border-top: 1px solid var(--ink);
+      }
+
+      .question p {
+        margin: 12px 0 0;
+        color: var(--ink);
+        font-size: 20px;
+        line-height: 1.12;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .note-controls {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 14px;
+        margin-top: 28px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+      }
+
+      .note-controls button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+      }
+
+      .note-controls button:last-child {
+        justify-self: end;
+      }
+
+      .note-controls button:hover:not(:disabled) {
+        color: var(--ink);
+      }
+
+      .note-controls button:disabled {
+        color: rgba(17, 17, 17, 0.22);
+        cursor: default;
+      }
+
+      .case-intro {
+        margin-top: 58px;
+      }
+
+      .case-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(46px, 5vw, 64px);
+        line-height: 1.08;
+        font-weight: 500;
+        letter-spacing: -2.2px;
       }
 
       .hero-copy {
@@ -688,6 +1006,20 @@
       }
 
       @media (max-width: 1100px) {
+        .personal-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .personal-copy {
+          min-height: auto;
+        }
+
+        .note-stack {
+          max-width: 100%;
+          justify-self: stretch;
+        }
+
         .visual-stage {
           width: min(880px, 100%);
         }
@@ -706,6 +1038,7 @@
         .hero {
           padding-top: 32px;
           padding-bottom: 56px;
+          background-size: 42px 42px;
         }
 
         .hero-copy {
@@ -714,6 +1047,75 @@
 
         h1 {
           letter-spacing: -1.4px;
+        }
+
+        .personal-frame {
+          padding-bottom: 40px;
+        }
+
+        .personal-header {
+          align-items: flex-start;
+          padding-block: 20px 28px;
+          font-size: 9px;
+          line-height: 1.4;
+        }
+
+        .personal-grid {
+          gap: 32px;
+          padding-top: 8px;
+        }
+
+        .personal-title {
+          font-size: clamp(52px, 16vw, 68px);
+          letter-spacing: -2.8px;
+        }
+
+        .identity {
+          font-size: 22px;
+        }
+
+        .studio-rule {
+          margin: 24px 0 20px;
+        }
+
+        .personal-subheadline {
+          font-size: 17px;
+        }
+
+        .progress-meta {
+          display: grid;
+          gap: 8px;
+        }
+
+        .studio-actions {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .studio-button {
+          width: 100%;
+        }
+
+        .note-stack {
+          max-width: calc(100% - 20px);
+          height: 500px;
+        }
+
+        .insight-card {
+          padding: 22px;
+        }
+
+        .note {
+          font-size: 22px;
+        }
+
+        .case-intro {
+          margin-top: 46px;
+        }
+
+        .case-title {
+          font-size: clamp(42px, 12vw, 58px);
+          letter-spacing: -1.6px;
         }
 
         .meta,
@@ -812,10 +1214,68 @@
       <section class="section hero">
         <div class="inner">
           <div class="hero-grid">
-            <div class="hero-copy">
-              <h1 class="reveal" style="--delay: 100ms">
+            <div class="personal-frame reveal" style="--delay: 80ms">
+              <header class="personal-header">
+                <span>Devin Wang · Design Studio</span>
+                <span>2026</span>
+              </header>
+
+              <div class="personal-grid">
+                <div class="personal-copy">
+                  <div>
+                    <p class="personal-kicker">AI Product Designer / Design Engineer</p>
+                    <h1 class="personal-title">Hi, I&rsquo;m Devin.</h1>
+                    <p class="identity">I design AI-native product systems, prototypes, and workflows.</p>
+                    <div class="studio-rule"></div>
+                    <p class="personal-subheadline">
+                      This case study shows how I turned messy human signals into a shipped AI research
+                      product, design system, and customer-facing demo story.
+                    </p>
+                    <div class="progress-block" aria-label="Personal website progress">
+                      <div class="progress-meta">
+                        <span>Personal website in progress</span>
+                        <span>68 / 100</span>
+                      </div>
+                      <div class="progress-track" aria-hidden="true">
+                        <span></span>
+                      </div>
+                      <p>This project page is part of my new portfolio system.</p>
+                    </div>
+                  </div>
+                  <div class="studio-actions" aria-label="Primary actions">
+                    <a class="studio-button" href="#work">View Work</a>
+                    <a class="studio-button secondary" href="https://devinwang.net/" target="_blank" rel="noreferrer">Old Website</a>
+                  </div>
+                </div>
+
+                <aside class="personal-note" aria-label="Daily AI Design note">
+                  <div class="note-stack" data-note-stack>
+                    <article class="insight-card" data-daily-note-card>
+                      <header class="note-slip-header">
+                        <span data-note-number></span>
+                        <span data-note-date></span>
+                      </header>
+                      <p class="note-label" data-note-label></p>
+                      <p class="note" data-note-insight></p>
+                      <div class="question">
+                        <span>Question</span>
+                        <p data-note-question></p>
+                      </div>
+                      <nav class="note-controls" aria-label="Daily note navigation">
+                        <button type="button" data-note-prev>Prev</button>
+                        <span data-note-count></span>
+                        <button type="button" data-note-next>Next</button>
+                      </nav>
+                    </article>
+                  </div>
+                </aside>
+              </div>
+            </div>
+
+            <div class="case-intro hero-copy">
+              <h2 class="case-title reveal" style="--delay: 180ms">
                 Teaching an <span class="ai-word">AI</span> to listen.
-              </h1>
+              </h2>
               <p class="lead reveal" style="--delay: 320ms">
                 <strong>Cookiy AI</strong> turns a hundred raw interviews into trustworthy research
                 intelligence by tomorrow. This is the story of designing it from zero to product,
@@ -883,7 +1343,7 @@
         </div>
       </section>
 
-      <section class="section cards-section">
+      <section class="section cards-section" id="work">
         <div class="inner">
           <div class="cards-heading">
             <div>
@@ -1056,6 +1516,90 @@
 
         requestAnimationFrame(tick);
       }
+
+      const dailyNotes = [
+        {
+          id: "silent-ai",
+          isoDate: "2026-06-10",
+          number: "No. 001",
+          date: "June 10",
+          label: "Daily AI Design Note",
+          insight:
+            "AI design is deciding what the system should notice, and what it should leave alone.",
+          question: "Where should the AI stay silent?",
+        },
+        {
+          id: "interface-memory",
+          isoDate: "2026-06-09",
+          number: "No. 000",
+          date: "June 09",
+          label: "Daily AI Design Note",
+          insight:
+            "Useful AI memory is selective on purpose. It remembers what reduces friction and forgets what becomes noise.",
+          question: "What should the system forget by default?",
+        },
+        {
+          id: "agents-ask-back",
+          isoDate: "2026-06-08",
+          number: "No. 000",
+          date: "June 08",
+          label: "Daily AI Design Note",
+          insight:
+            "Good agents do not always move faster. Sometimes they earn trust by asking the one missing question.",
+          question: "Where does asking one more question improve trust?",
+        },
+      ];
+
+      const noteCard = document.querySelector("[data-daily-note-card]");
+      const prevButton = document.querySelector("[data-note-prev]");
+      const nextButton = document.querySelector("[data-note-next]");
+      const countLabel = document.querySelector("[data-note-count]");
+      let activeNoteIndex = 0;
+
+      function renderDailyNote(note, index) {
+        const fields = {
+          "[data-note-number]": note.number,
+          "[data-note-label]": note.label,
+          "[data-note-date]": note.date,
+          "[data-note-insight]": note.insight,
+          "[data-note-question]": note.question,
+        };
+
+        Object.entries(fields).forEach(([selector, value]) => {
+          const node = document.querySelector(selector);
+          if (node) node.textContent = value;
+        });
+
+        if (countLabel) {
+          countLabel.textContent = `${String(index + 1).padStart(2, "0")} / ${String(dailyNotes.length).padStart(2, "0")}`;
+        }
+
+        if (prevButton) prevButton.disabled = index >= dailyNotes.length - 1;
+        if (nextButton) nextButton.disabled = index <= 0;
+      }
+
+      function setActiveNote(nextIndex) {
+        const boundedIndex = Math.min(Math.max(nextIndex, 0), dailyNotes.length - 1);
+        if (boundedIndex === activeNoteIndex) return;
+        activeNoteIndex = boundedIndex;
+
+        if (!noteCard) {
+          renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
+          return;
+        }
+
+        noteCard.style.opacity = "0";
+        noteCard.style.transform = "translateY(8px)";
+        window.setTimeout(() => {
+          renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
+          noteCard.style.opacity = "1";
+          noteCard.style.transform = "translateY(0)";
+        }, 140);
+      }
+
+      renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
+      prevButton?.addEventListener("click", () => setActiveNote(activeNoteIndex + 1));
+      nextButton?.addEventListener("click", () => setActiveNote(activeNoteIndex - 1));
     </script>
   </body>
 </html>
