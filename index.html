@@ -55,7 +55,8 @@
       }
 
       .hero {
-        padding-top: 64px;
+        min-height: 100svh;
+        padding-top: clamp(48px, 7vh, 92px);
         padding-bottom: 58px;
         background:
           linear-gradient(rgba(17, 17, 17, 0.035) 1px, transparent 1px),
@@ -64,14 +65,53 @@
         background-size: 56px 56px;
       }
 
+      .hero .inner {
+        max-width: 1548px;
+        min-height: calc(100svh - clamp(48px, 7vh, 92px) - 58px);
+      }
+
       .hero-grid {
         display: block;
       }
 
+      .case-hero {
+        padding-top: clamp(96px, 14vh, 156px);
+        background: var(--paper);
+      }
+
+      .section-fade {
+        opacity: 0;
+        transform: translateY(64px);
+        filter: blur(10px);
+        transition:
+          opacity 1100ms var(--ease),
+          transform 1100ms var(--ease),
+          filter 1100ms var(--ease);
+      }
+
+      .section-fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+
       .personal-frame {
+        position: relative;
+        min-height: min(720px, calc(100svh - 120px));
+        display: flex;
+        flex-direction: column;
         padding-bottom: 54px;
-        border-top: 1px solid rgba(17, 17, 17, 0.72);
         border-bottom: 1px solid rgba(17, 17, 17, 0.72);
+      }
+
+      .personal-frame::after {
+        content: "";
+        position: absolute;
+        top: 92px;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background: rgba(17, 17, 17, 0.22);
       }
 
       .personal-header {
@@ -79,7 +119,8 @@
         align-items: center;
         justify-content: space-between;
         gap: 24px;
-        padding-block: 24px 34px;
+        padding-block: 34px 34px;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.72);
         color: var(--soft);
         font-family: "JetBrains Mono", monospace;
         font-size: 10px;
@@ -90,35 +131,28 @@
       }
 
       .personal-grid {
+        flex: 1;
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
-        gap: 56px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 0;
         align-items: stretch;
-        padding-top: 22px;
       }
 
       .personal-copy {
-        min-height: 430px;
+        position: relative;
+        z-index: 1;
+        min-height: 560px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-      }
-
-      .personal-kicker {
-        margin: 0 0 24px;
-        color: var(--soft);
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
+        padding: 50px 72px 16px 0;
       }
 
       .personal-title {
         max-width: 640px;
-        font-size: clamp(58px, 7vw, 88px);
+        font-size: clamp(72px, 6.4vw, 96px);
         line-height: 0.96;
-        letter-spacing: -4.2px;
+        letter-spacing: 0;
         font-weight: 560;
       }
 
@@ -128,7 +162,7 @@
         color: var(--ink);
         font-size: clamp(22px, 2.4vw, 30px);
         line-height: 1.12;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
         font-weight: 500;
       }
 
@@ -143,7 +177,7 @@
         max-width: 540px;
         margin: 0;
         color: var(--ink);
-        font-size: 18px;
+        font-size: 21px;
         line-height: 1.55;
         font-weight: 600;
       }
@@ -177,7 +211,7 @@
       .progress-track span {
         position: absolute;
         inset: 0 auto 0 0;
-        width: 68%;
+        width: 34%;
         background: var(--ink);
       }
 
@@ -241,7 +275,8 @@
         max-width: 350px;
         height: 470px;
         align-self: center;
-        justify-self: end;
+        justify-self: center;
+        margin-top: 42px;
       }
 
       .note-stack::before,
@@ -1006,18 +1041,25 @@
       }
 
       @media (max-width: 1100px) {
-        .personal-grid {
-          grid-template-columns: 1fr;
-          gap: 40px;
-        }
-
         .personal-copy {
-          min-height: auto;
+          padding-right: 48px;
         }
 
         .note-stack {
           max-width: 100%;
           justify-self: stretch;
+        }
+
+        .personal-title {
+          font-size: clamp(58px, 7.8vw, 86px);
+        }
+
+        .identity {
+          font-size: clamp(20px, 2.4vw, 28px);
+        }
+
+        .personal-subheadline {
+          font-size: 19px;
         }
 
         .visual-stage {
@@ -1034,8 +1076,25 @@
         }
       }
 
+      @media (max-width: 860px) {
+        .personal-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .personal-frame::after {
+          display: none;
+        }
+
+        .personal-copy {
+          min-height: auto;
+          padding-right: 0;
+        }
+      }
+
       @media (max-width: 760px) {
         .hero {
+          min-height: auto;
           padding-top: 32px;
           padding-bottom: 56px;
           background-size: 42px 42px;
@@ -1050,6 +1109,7 @@
         }
 
         .personal-frame {
+          min-height: auto;
           padding-bottom: 40px;
         }
 
@@ -1099,6 +1159,7 @@
         .note-stack {
           max-width: calc(100% - 20px);
           height: 500px;
+          margin-top: 0;
         }
 
         .insight-card {
@@ -1216,35 +1277,30 @@
           <div class="hero-grid">
             <div class="personal-frame reveal" style="--delay: 80ms">
               <header class="personal-header">
-                <span>Devin Wang · Design Studio</span>
+                <span>Design Studio</span>
                 <span>2026</span>
               </header>
 
               <div class="personal-grid">
                 <div class="personal-copy">
                   <div>
-                    <p class="personal-kicker">AI Product Designer / Design Engineer</p>
                     <h1 class="personal-title">Hi, I&rsquo;m Devin.</h1>
-                    <p class="identity">I design AI-native product systems, prototypes, and workflows.</p>
+                    <p class="identity">AI Product Designer / Design Engineer</p>
                     <div class="studio-rule"></div>
                     <p class="personal-subheadline">
-                      This case study shows how I turned messy human signals into a shipped AI research
-                      product, design system, and customer-facing demo story.
+                      I design and prototype AI-native products that turn messy human signals into
+                      clear, usable systems.
                     </p>
                     <div class="progress-block" aria-label="Personal website progress">
                       <div class="progress-meta">
                         <span>Personal website in progress</span>
-                        <span>68 / 100</span>
+                        <span>34 / 100</span>
                       </div>
                       <div class="progress-track" aria-hidden="true">
                         <span></span>
                       </div>
-                      <p>This project page is part of my new portfolio system.</p>
+                      <p>This personal website is still being updated.</p>
                     </div>
-                  </div>
-                  <div class="studio-actions" aria-label="Primary actions">
-                    <a class="studio-button" href="#work">View Work</a>
-                    <a class="studio-button secondary" href="https://devinwang.net/" target="_blank" rel="noreferrer">Old Website</a>
                   </div>
                 </div>
 
@@ -1271,7 +1327,13 @@
                 </aside>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section case-hero section-fade">
+        <div class="inner">
+          <div class="hero-grid">
             <div class="case-intro hero-copy">
               <h2 class="case-title reveal" style="--delay: 180ms">
                 Teaching an <span class="ai-word">AI</span> to listen.
@@ -1496,7 +1558,9 @@
         { threshold: 0.18, rootMargin: "0px 0px -80px 0px" }
       );
 
-      document.querySelectorAll(".reveal, .stat").forEach((el) => observer.observe(el));
+      document
+        .querySelectorAll(".reveal, .stat, .section-fade")
+        .forEach((el) => observer.observe(el));
 
       function animateNumber(el) {
         el.dataset.done = "true";
