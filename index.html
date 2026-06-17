@@ -160,17 +160,28 @@
 
       .personal-title {
         max-width: 640px;
-        font-size: clamp(72px, 6.4vw, 96px);
+        font-size: clamp(74px, 7vw, 112px);
         line-height: 0.96;
         letter-spacing: 0;
         font-weight: 560;
       }
 
+      .case-kicker {
+        margin: 0 0 18px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
       .identity {
-        max-width: 520px;
+        max-width: 620px;
         margin: 22px 0 0;
         color: var(--ink);
-        font-size: clamp(22px, 2.4vw, 30px);
+        font-size: clamp(26px, 2.8vw, 38px);
         line-height: 1.12;
         letter-spacing: 0;
         font-weight: 500;
@@ -190,6 +201,40 @@
         font-size: 21px;
         line-height: 1.55;
         font-weight: 600;
+      }
+
+      .project-meta-grid {
+        max-width: 640px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 34px;
+        margin-top: 30px;
+        padding-top: 22px;
+        border-top: 1px solid rgba(17, 17, 17, 0.18);
+      }
+
+      .project-meta-grid div {
+        min-width: 0;
+      }
+
+      .project-meta-label {
+        display: block;
+        margin: 0 0 7px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .project-meta-value {
+        display: block;
+        color: var(--ink);
+        font-size: 14px;
+        line-height: 1.35;
+        font-weight: 620;
       }
 
 
@@ -280,6 +325,10 @@
         transition: opacity 220ms var(--ease), transform 220ms var(--ease);
       }
 
+      .focus-card {
+        justify-content: flex-start;
+      }
+
       .note-slip-header {
         display: flex;
         align-items: center;
@@ -321,6 +370,15 @@
         font-weight: 620;
       }
 
+      .focus-card .note {
+        min-height: 0;
+        margin-top: 28px;
+        color: var(--ink);
+        font-size: clamp(18px, 1.55vw, 21px);
+        line-height: 1.38;
+        font-weight: 620;
+      }
+
       .question {
         margin-top: auto;
         padding-top: 18px;
@@ -334,6 +392,19 @@
         line-height: 1.12;
         font-weight: 700;
         letter-spacing: -0.02em;
+      }
+
+      .focus-byline {
+        margin-top: 22px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(17, 17, 17, 0.1);
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        line-height: 1.45;
+        text-transform: uppercase;
       }
 
       .note-controls {
@@ -369,7 +440,7 @@
       }
 
       .case-intro {
-        margin-top: 58px;
+        margin-top: 38px;
       }
 
       .case-title {
@@ -896,60 +967,58 @@
 
       .reflection-section {
         --reflection-accent: #ff8700;
-        padding-top: 118px;
-        padding-bottom: 128px;
+        padding-top: 94px;
+        padding-bottom: 110px;
         background: var(--sand);
       }
 
       .reflection-head {
-        max-width: 980px;
-        margin-inline: auto;
-        text-align: center;
+        max-width: 760px;
       }
 
       .reflection-display {
         margin: 0;
         color: var(--ink);
-        font-size: clamp(58px, 8vw, 92px);
-        line-height: 0.98;
-        font-weight: 620;
-        letter-spacing: -3.6px;
+        font-size: clamp(38px, 4.8vw, 56px);
+        line-height: 1.04;
+        font-weight: 560;
+        letter-spacing: -1.6px;
       }
 
       .reflection-lead {
-        max-width: 900px;
-        margin: 48px auto 0;
+        max-width: 680px;
+        margin: 22px 0 0;
         color: #5a5a5a;
-        font-size: clamp(28px, 4vw, 46px);
-        line-height: 1.42;
-        font-weight: 520;
-        letter-spacing: -1px;
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.62;
+        font-weight: 500;
+        letter-spacing: -0.2px;
       }
 
       .reflection-board {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: clamp(52px, 7vw, 104px) clamp(58px, 9vw, 132px);
-        margin-top: 82px;
+        gap: clamp(34px, 5vw, 64px) clamp(48px, 7vw, 96px);
+        margin-top: 64px;
       }
 
       .reflection-note h3 {
         margin: 0;
         color: var(--reflection-accent);
-        font-size: clamp(22px, 2.4vw, 31px);
-        line-height: 1.16;
-        font-weight: 520;
-        letter-spacing: -0.7px;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.22;
+        font-weight: 560;
+        letter-spacing: -0.4px;
       }
 
       .reflection-note p {
         max-width: 560px;
-        margin: 32px 0 0;
+        margin: 20px 0 0;
         color: #8f8f8f;
-        font-size: clamp(22px, 2.5vw, 30px);
-        line-height: 1.12;
+        font-size: clamp(17px, 1.6vw, 21px);
+        line-height: 1.38;
         font-weight: 520;
-        letter-spacing: -0.8px;
+        letter-spacing: -0.35px;
       }
 
       .reflection-note strong {
@@ -964,8 +1033,8 @@
         display: grid;
         place-items: center;
         padding: 34px 56px;
-        border: 2px solid var(--ink);
-        border-radius: 28px;
+        border: 1.5px solid var(--ink);
+        border-radius: 22px;
         background: rgba(255, 255, 255, 0.32);
         box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.05);
       }
@@ -974,7 +1043,7 @@
         margin: 0;
         color: #5a5a5a;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(32px, 4vw, 48px);
+        font-size: clamp(28px, 3.2vw, 40px);
         line-height: 1.35;
         text-align: center;
       }
@@ -1164,7 +1233,7 @@
         }
 
         .personal-title {
-          font-size: clamp(58px, 7.8vw, 86px);
+          font-size: clamp(64px, 8.4vw, 98px);
         }
 
         .identity {
@@ -1173,6 +1242,10 @@
 
         .personal-subheadline {
           font-size: 19px;
+        }
+
+        .project-meta-grid {
+          gap: 16px 24px;
         }
 
         .visual-stage {
@@ -1246,12 +1319,12 @@
         }
 
         .personal-title {
-          font-size: clamp(52px, 16vw, 68px);
+          font-size: clamp(58px, 18vw, 76px);
           letter-spacing: -2.8px;
         }
 
         .identity {
-          font-size: 22px;
+          font-size: 26px;
         }
 
         .studio-rule {
@@ -1260,6 +1333,12 @@
 
         .personal-subheadline {
           font-size: 17px;
+        }
+
+        .project-meta-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          margin-top: 24px;
         }
 
         .studio-actions {
@@ -1273,7 +1352,7 @@
 
         .note-stack {
           max-width: calc(100% - 20px);
-          height: 500px;
+          height: 390px;
           margin-top: 0;
         }
 
@@ -1283,6 +1362,10 @@
 
         .note {
           font-size: 22px;
+        }
+
+        .focus-card .note {
+          font-size: 20px;
         }
 
         .case-intro {
@@ -1388,18 +1471,18 @@
         }
 
         .reflection-lead {
-          margin-top: 30px;
-          font-size: 24px;
+          margin-top: 20px;
+          font-size: 17px;
         }
 
         .reflection-board {
-          gap: 54px;
-          margin-top: 58px;
+          gap: 42px;
+          margin-top: 46px;
         }
 
         .reflection-note p {
-          font-size: 21px;
-          line-height: 1.2;
+          font-size: 17px;
+          line-height: 1.42;
         }
 
         .reflection-callout {
@@ -1509,45 +1592,63 @@
           <div class="hero-grid">
             <div class="personal-frame reveal" style="--delay: 80ms">
               <header class="personal-header">
-                <span>Design Studio</span>
-                <span>2026</span>
+                <span>AI Research SaaS Case Study</span>
+                <span>2025 — 2026</span>
               </header>
 
               <div class="personal-grid">
                 <div class="personal-copy">
                   <div>
-                    <h1 class="personal-title">Hi, I&rsquo;m Devin.</h1>
-                    <p class="identity">AI Product Designer / Design Engineer</p>
+                    <p class="case-kicker">Case Study by Devin Wang · Founding Product Designer</p>
+                    <h1 class="personal-title">Cookiy AI</h1>
+                    <p class="identity">Designing Trust into AI-Native Research</p>
                     <div class="studio-rule"></div>
                     <p class="personal-subheadline">
-                      I design and prototype AI-native products that turn messy human signals into
-                      clear, usable systems.
+                      Cookiy AI helps research teams run AI-moderated interviews, observe live
+                      sessions, and turn qualitative conversations into structured insights.
                     </p>
+                    <div class="project-meta-grid" aria-label="Project summary">
+                      <div>
+                        <span class="project-meta-label">Role</span>
+                        <strong class="project-meta-value">Founding Product Designer</strong>
+                      </div>
+                      <div>
+                        <span class="project-meta-label">Product</span>
+                        <strong class="project-meta-value">AI Research SaaS</strong>
+                      </div>
+                      <div>
+                        <span class="project-meta-label">Scope</span>
+                        <strong class="project-meta-value">AI Workflow · Observe Room · Insight Report</strong>
+                      </div>
+                      <div>
+                        <span class="project-meta-label">Impact</span>
+                        <strong class="project-meta-value">50,000+ interview-flow entries</strong>
+                      </div>
+                    </div>
                     <div class="studio-actions">
-                      <a class="studio-button" href="#work">Case Study ↓</a>
-                      <a class="studio-button secondary" href="https://devinwang.net/" target="_blank" rel="noreferrer">More Work</a>
+                      <a class="studio-button" href="#work">View Case Study ↓</a>
+                      <a class="studio-button secondary" href="#trust">Observe Room</a>
                     </div>
                   </div>
                 </div>
 
-                <aside class="personal-note" aria-label="Daily AI Design note">
-                  <div class="note-stack" data-note-stack>
-                    <article class="insight-card" data-daily-note-card>
+                <aside class="personal-note" aria-label="Cookiy AI case focus">
+                  <div class="note-stack focus-stack">
+                    <article class="insight-card focus-card">
                       <header class="note-slip-header">
-                        <span data-note-number></span>
-                        <span data-note-date></span>
+                        <span>Case Focus</span>
+                        <span>Trust Layer</span>
                       </header>
-                      <p class="note-label" data-note-label></p>
-                      <p class="note" data-note-insight></p>
+                      <p class="note-label">AI interviews cannot be a black box.</p>
+                      <p class="note">
+                        Researchers need visibility into AI actions, session quality, and the moment
+                        human intervention is needed.
+                      </p>
                       <div class="question">
-                        <span>Question</span>
-                        <p data-note-question></p>
+                        <span>Design Question</span>
+                        <p>Make automation observable without slowing research.</p>
                       </div>
-                      <nav class="note-controls" aria-label="Daily note navigation">
-                        <button type="button" data-note-prev>Prev</button>
-                        <span data-note-count></span>
-                        <button type="button" data-note-next>Next</button>
-                      </nav>
+                      <p class="focus-byline">Devin Wang · Product Designer · Human-AI Interaction</p>
                     </article>
                   </div>
                 </aside>
@@ -1562,12 +1663,11 @@
           <div class="hero-grid">
             <div class="case-intro hero-copy">
               <h2 class="case-title reveal" style="--delay: 180ms">
-                Teaching an <span class="ai-word">AI</span> to listen.
+                Making <span class="ai-word">AI</span> interviews observable.
               </h2>
               <p class="lead reveal" style="--delay: 320ms">
-                <strong>Cookiy AI</strong> is an AI-native research SaaS that helps teams run
-                moderated interviews at scale. My work focused on making the AI observable,
-                controllable, and trustworthy for researchers.
+                The interface had to reveal enough AI behavior for researchers to evaluate quality,
+                intervene during live sessions, and turn messy interview data into decisions.
               </p>
             </div>
 
@@ -1668,7 +1768,7 @@
         </div>
       </section>
 
-      <section class="section trust-section">
+      <section class="section trust-section" id="trust">
         <div class="inner">
           <div class="trust-header">
             <div class="reveal">
@@ -1779,8 +1879,8 @@
           <div class="reflection-head reveal">
             <h2 class="reflection-display">Design Reflection</h2>
             <p class="reflection-lead">
-              While building Cookiy, design decisions were never just visual. Each of these three
-              challenges could fill an hour on its own.
+              The hardest product decisions sat between interface, trust, and go-to-market reality.
+              These notes are the conversation after the case study, not the headline.
             </p>
           </div>
 
@@ -1883,89 +1983,6 @@
         requestAnimationFrame(tick);
       }
 
-      const dailyNotes = [
-        {
-          id: "silent-ai",
-          isoDate: "2026-06-10",
-          number: "No. 001",
-          date: "June 10",
-          label: "Daily AI Design Note",
-          insight:
-            "AI design is deciding what the system should notice, and what it should leave alone.",
-          question: "Where should the AI stay silent?",
-        },
-        {
-          id: "interface-memory",
-          isoDate: "2026-06-09",
-          number: "No. 000",
-          date: "June 09",
-          label: "Daily AI Design Note",
-          insight:
-            "Useful AI memory is selective on purpose. It remembers what reduces friction and forgets what becomes noise.",
-          question: "What should the system forget by default?",
-        },
-        {
-          id: "agents-ask-back",
-          isoDate: "2026-06-08",
-          number: "No. 000",
-          date: "June 08",
-          label: "Daily AI Design Note",
-          insight:
-            "Good agents do not always move faster. Sometimes they earn trust by asking the one missing question.",
-          question: "Where does asking one more question improve trust?",
-        },
-      ];
-
-      const noteCard = document.querySelector("[data-daily-note-card]");
-      const prevButton = document.querySelector("[data-note-prev]");
-      const nextButton = document.querySelector("[data-note-next]");
-      const countLabel = document.querySelector("[data-note-count]");
-      let activeNoteIndex = 0;
-
-      function renderDailyNote(note, index) {
-        const fields = {
-          "[data-note-number]": note.number,
-          "[data-note-label]": note.label,
-          "[data-note-date]": note.date,
-          "[data-note-insight]": note.insight,
-          "[data-note-question]": note.question,
-        };
-
-        Object.entries(fields).forEach(([selector, value]) => {
-          const node = document.querySelector(selector);
-          if (node) node.textContent = value;
-        });
-
-        if (countLabel) {
-          countLabel.textContent = `${String(index + 1).padStart(2, "0")} / ${String(dailyNotes.length).padStart(2, "0")}`;
-        }
-
-        if (prevButton) prevButton.disabled = index >= dailyNotes.length - 1;
-        if (nextButton) nextButton.disabled = index <= 0;
-      }
-
-      function setActiveNote(nextIndex) {
-        const boundedIndex = Math.min(Math.max(nextIndex, 0), dailyNotes.length - 1);
-        if (boundedIndex === activeNoteIndex) return;
-        activeNoteIndex = boundedIndex;
-
-        if (!noteCard) {
-          renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
-          return;
-        }
-
-        noteCard.style.opacity = "0";
-        noteCard.style.transform = "translateY(8px)";
-        window.setTimeout(() => {
-          renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
-          noteCard.style.opacity = "1";
-          noteCard.style.transform = "translateY(0)";
-        }, 140);
-      }
-
-      renderDailyNote(dailyNotes[activeNoteIndex], activeNoteIndex);
-      prevButton?.addEventListener("click", () => setActiveNote(activeNoteIndex + 1));
-      nextButton?.addEventListener("click", () => setActiveNote(activeNoteIndex - 1));
     </script>
   </body>
 </html>

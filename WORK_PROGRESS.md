@@ -36,15 +36,16 @@ http://127.0.0.1:8765/
 
 The current case study is organized as:
 
-1. Personal hero
-   - "Hi, I'm Devin."
-   - Positions Devin as an AI Product Designer / Design Engineer.
-   - Uses a grid/editorial personal website style.
+1. Cookiy case-study hero
+   - Main title: "Cookiy AI"
+   - Secondary line: "Designing Trust into AI-Native Research"
+   - Devin appears as a byline, not the primary headline.
+   - The right-side editorial card is a static `Case Focus` card explaining why AI interviews cannot be a black box.
 
-2. Cookiy hero
-   - Title: "Teaching an AI to listen."
-   - Explains Cookiy AI as an AI-native research SaaS.
-   - Focus: making the AI observable, controllable, and trustworthy for researchers.
+2. Product visual proof
+   - Title: "Making AI interviews observable."
+   - Shows the Cookiy product/device composition.
+   - Focus: making AI behavior visible enough for researchers to evaluate quality and intervene.
 
 3. `01 Context`
    - Explains the research workflow:
@@ -80,6 +81,7 @@ The current case study is organized as:
      - Does Every AI Startup Eventually Lose Its App?
      - Enterprise Product, Consumer Dynamics?
      - Confidentiality vs. Visibility?
+   - This section is intentionally quieter than the main case sections. It should feel like an afterword, not a second hero.
    - Ends with a callout using `assets/dv.png`.
 
 8. Old website link
@@ -108,6 +110,9 @@ Preserve the current portfolio voice:
 
 Recent design decisions:
 
+- The hero was changed from a personal homepage opening to a project-first Cookiy AI case-study opening.
+- The old rotating Daily AI Design Note card was replaced with a static Case Focus card.
+- `Design Reflection` was visually reduced so it supports the case instead of overpowering Observe Room.
 - The old CSS-made `DV` pixel mark in the reflection callout was replaced with `assets/dv.png`.
 - The PNG should stay attached to the lower-right edge of the reflection callout.
 - A favicon link now points to `assets/cookiy-logo.png` to avoid a missing favicon request.
@@ -116,6 +121,8 @@ Recent design decisions:
 
 Do not add back:
 
+- A `Hi, I'm Devin` first-screen hero on this page
+- The rotating Daily AI Design Note card as the main hero support
 - "18-person team" framing
 - Unbounded "50,000 users" claims
 - Generic "I designed many things" language
@@ -153,4 +160,3 @@ Before pushing future visual edits, check:
 This repo is intended to be pushed directly to GitHub Pages. After pushing to `main`, the public URL may take a short time to update:
 
 https://devin55iwl.github.io/cookiy-motion-html/
-
