@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookiy AI - Project Introduction</title>
+    <link rel="icon" type="image/png" href="assets/cookiy-logo.png" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap");
 
@@ -730,6 +731,203 @@
         line-height: 1.625;
       }
 
+      .story-section {
+        padding-top: 118px;
+        padding-bottom: 130px;
+        border-top: 1px solid var(--line);
+        background: var(--paper);
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+        gap: clamp(42px, 7vw, 104px);
+        align-items: start;
+      }
+
+      .story-label,
+      .trust-label,
+      .reflection-label {
+        margin: 0 0 18px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .story-title,
+      .trust-title,
+      .reflection-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(34px, 4vw, 48px);
+        line-height: 1.06;
+        font-weight: 500;
+        letter-spacing: -1.2px;
+      }
+
+      .role-block,
+      .challenge-block {
+        border-top: 1px solid rgba(17, 17, 17, 0.18);
+        padding-top: 26px;
+      }
+
+      .challenge-block {
+        margin-top: 58px;
+      }
+
+      .role-title {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(28px, 3vw, 38px);
+        line-height: 1.12;
+        font-weight: 560;
+        letter-spacing: -0.9px;
+      }
+
+      .role-copy,
+      .challenge-copy,
+      .trust-copy,
+      .reflection-copy {
+        margin: 18px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.72;
+      }
+
+      .evidence-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .evidence-link {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        border: 1px solid rgba(17, 17, 17, 0.18);
+        border-radius: 999px;
+        color: var(--ink);
+        background: rgba(255, 255, 255, 0.72);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 240ms var(--ease), background 240ms var(--ease), color 240ms var(--ease);
+      }
+
+      .evidence-link.primary {
+        color: #fff;
+        border-color: var(--ink);
+        background: var(--ink);
+      }
+
+      .evidence-link:hover {
+        color: #fff;
+        background: var(--ink);
+        transform: translateY(-2px);
+      }
+
+      .trust-section {
+        padding-top: 142px;
+        padding-bottom: 150px;
+        background: #090909;
+        color: #fff;
+      }
+
+      .trust-section .inner {
+        max-width: 1160px;
+      }
+
+      .trust-header {
+        display: grid;
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+        gap: clamp(36px, 7vw, 96px);
+        align-items: end;
+      }
+
+      .trust-title,
+      .trust-copy strong {
+        color: #fff;
+      }
+
+      .trust-copy {
+        margin-top: 0;
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .trust-frame {
+        position: relative;
+        margin-top: 74px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        background: #000;
+      }
+
+      .trust-frame img {
+        width: 100%;
+        height: auto;
+        opacity: 0.92;
+      }
+
+      .trust-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, 0.3)),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.28), transparent 24%, transparent 72%, rgba(0, 0, 0, 0.24));
+        pointer-events: none;
+      }
+
+      .trust-signals {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 1px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .trust-signal {
+        min-height: 142px;
+        padding: 24px;
+        background: #101010;
+      }
+
+      .signal-index {
+        display: block;
+        color: var(--warm);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .trust-signal h3 {
+        margin: 16px 0 0;
+        color: #fff;
+        font-size: 19px;
+        line-height: 1.25;
+        font-weight: 560;
+        letter-spacing: -0.25px;
+      }
+
+      .trust-signal p {
+        margin: 10px 0 0;
+        color: rgba(255, 255, 255, 0.58);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
       .changed {
         padding-top: 150px;
         padding-bottom: 150px;
@@ -869,6 +1067,108 @@
         margin-top: 18px;
         color: var(--soft);
         font-size: 12px;
+      }
+
+      .reflection-section {
+        --reflection-accent: #ff8700;
+        padding-top: 118px;
+        padding-bottom: 128px;
+        background: var(--sand);
+      }
+
+      .reflection-head {
+        max-width: 980px;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .reflection-display {
+        margin: 0;
+        color: var(--ink);
+        font-size: clamp(58px, 8vw, 92px);
+        line-height: 0.98;
+        font-weight: 620;
+        letter-spacing: -3.6px;
+      }
+
+      .reflection-lead {
+        max-width: 900px;
+        margin: 48px auto 0;
+        color: #5a5a5a;
+        font-size: clamp(28px, 4vw, 46px);
+        line-height: 1.42;
+        font-weight: 520;
+        letter-spacing: -1px;
+      }
+
+      .reflection-board {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(52px, 7vw, 104px) clamp(58px, 9vw, 132px);
+        margin-top: 82px;
+      }
+
+      .reflection-note h3 {
+        margin: 0;
+        color: var(--reflection-accent);
+        font-size: clamp(22px, 2.4vw, 31px);
+        line-height: 1.16;
+        font-weight: 520;
+        letter-spacing: -0.7px;
+      }
+
+      .reflection-note p {
+        max-width: 560px;
+        margin: 32px 0 0;
+        color: #8f8f8f;
+        font-size: clamp(22px, 2.5vw, 30px);
+        line-height: 1.12;
+        font-weight: 520;
+        letter-spacing: -0.8px;
+      }
+
+      .reflection-note strong {
+        color: #666;
+        font-weight: 720;
+      }
+
+      .reflection-callout {
+        position: relative;
+        align-self: end;
+        min-height: 182px;
+        display: grid;
+        place-items: center;
+        padding: 34px 56px;
+        border: 2px solid var(--ink);
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.32);
+        box-shadow: 0 0 0 1px rgba(17, 17, 17, 0.05);
+      }
+
+      .reflection-callout p {
+        margin: 0;
+        color: #5a5a5a;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(32px, 4vw, 48px);
+        line-height: 1.35;
+        text-align: center;
+      }
+
+      .reflection-mark {
+        position: absolute;
+        right: -74px;
+        bottom: -64px;
+        width: clamp(118px, 11vw, 164px);
+        pointer-events: none;
+        transform: rotate(-4deg);
+        transform-origin: center;
+      }
+
+      .reflection-mark img {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 18px 28px rgba(255, 126, 0, 0.18));
       }
 
       .archive-link-section {
@@ -1071,8 +1371,15 @@
         }
 
         .changed-title,
-        .impact-panel {
+        .impact-panel,
+        .story-grid,
+        .trust-header,
+        .reflection-grid {
           grid-template-columns: 1fr;
+        }
+
+        .trust-signals {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -1223,12 +1530,91 @@
         }
 
         .cards-section,
-        .changed {
+        .changed,
+        .story-section,
+        .trust-section,
+        .reflection-section {
           padding-bottom: 88px;
         }
 
-        .changed {
+        .changed,
+        .story-section,
+        .trust-section {
           padding-top: 88px;
+        }
+
+        .role-copy,
+        .challenge-copy,
+        .trust-copy,
+        .reflection-copy,
+        .section-intro {
+          font-size: 16px;
+        }
+
+        .challenge-block {
+          margin-top: 42px;
+        }
+
+        .evidence-links {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+
+        .trust-frame {
+          margin-top: 44px;
+          border-radius: 12px;
+        }
+
+        .trust-frame img {
+          width: 150%;
+          max-width: none;
+          transform: translateX(-18%);
+        }
+
+        .trust-signals,
+        .reflection-board {
+          grid-template-columns: 1fr;
+        }
+
+        .reflection-display {
+          letter-spacing: -2px;
+        }
+
+        .reflection-lead {
+          margin-top: 30px;
+          font-size: 24px;
+        }
+
+        .reflection-board {
+          gap: 54px;
+          margin-top: 58px;
+        }
+
+        .reflection-note p {
+          font-size: 21px;
+          line-height: 1.2;
+        }
+
+        .reflection-callout {
+          min-height: 160px;
+          padding: 28px 24px;
+          margin-right: 30px;
+        }
+
+        .reflection-callout p {
+          font-size: 29px;
+        }
+
+        .reflection-mark {
+          right: -28px;
+          bottom: -42px;
+          width: 108px;
+          transform: rotate(-4deg);
+          transform-origin: right bottom;
+        }
+
+        .trust-signal {
+          min-height: auto;
         }
 
         .changed-title {
@@ -1339,9 +1725,9 @@
                 Teaching an <span class="ai-word">AI</span> to listen.
               </h2>
               <p class="lead reveal" style="--delay: 320ms">
-                <strong>Cookiy AI</strong> turns a hundred raw interviews into trustworthy research
-                intelligence by tomorrow. This is the story of designing it from zero to product,
-                with a seed stage team, in twelve months.
+                <strong>Cookiy AI</strong> is an AI-native research SaaS that helps teams run
+                moderated interviews at scale. My work focused on making the AI observable,
+                controllable, and trustworthy for researchers.
               </p>
             </div>
 
@@ -1379,7 +1765,7 @@
               </div>
               <div>
                 <p class="meta-label">Reach</p>
-                <p class="meta-value">50,000+ Participants</p>
+                <p class="meta-value">50,000+ Flow Entries</p>
               </div>
             </div>
           </div>
@@ -1389,10 +1775,12 @@
       <section class="section border-top">
         <div class="inner">
           <div class="center-heading">
-            <h2 class="reveal">What Cookiy is.</h2>
+            <h2 class="reveal">01 Context</h2>
             <p class="section-intro reveal" style="--delay: 100ms">
-              <strong>Cookiy AI</strong> is reimagining how user research works in the age of AI —
-              transforming conversations into signals, insights, and decisions at scale.
+              <strong>Cookiy</strong> helps research teams move from discussion guide creation to
+              participant recruitment, AI-moderated interviews, observation, insight generation, and
+              reporting. The core problem was not whether AI could interview people, but whether
+              researchers could trust the process.
             </p>
           </div>
           <div class="screenshot-frame reveal" style="--reveal-y: 24px">
@@ -1405,71 +1793,89 @@
         </div>
       </section>
 
-      <section class="section cards-section" id="work">
+      <section class="section story-section" id="work">
         <div class="inner">
-          <div class="cards-heading">
+          <div class="story-grid">
+            <div class="reveal">
+              <p class="story-label">02 My Role</p>
+              <h2 class="story-title">Founding Product Designer</h2>
+            </div>
+
             <div>
-              <h2 class="reveal">What I did.</h2>
-              <p class="reveal" style="--delay: 100ms">
-                Turning an ambitious vision for AI-native research into a scalable product, system,
-                and customer experience.
-              </p>
+              <div class="role-block reveal" style="--delay: 80ms">
+                <p class="role-copy">
+                  Owned AI workflow design, complex states, core product modules, interactive demos,
+                  and customer-facing presentation experiences.
+                </p>
+                <div class="evidence-links" aria-label="Project evidence links">
+                  <a class="evidence-link primary" href="https://cookiy-ai-portfolio-demo.vercel.app/" target="_blank" rel="noreferrer">Try demo</a>
+                  <a class="evidence-link" href="https://github.com/devin55iwl/report-everything" target="_blank" rel="noreferrer">Agent Skill</a>
+                  <a class="evidence-link" href="https://www.figma.com/design/tfhrrU7GYrmNbKXBvQklmA/Cookiy-AI-2026-?node-id=6-104&t=gnEC8pAiabKZaKxl-1" target="_blank" rel="noreferrer">Figma</a>
+                  <a class="evidence-link" href="https://cookiy.ai/" target="_blank" rel="noreferrer">Cookiy.AI</a>
+                </div>
+              </div>
+
+              <div class="challenge-block reveal" style="--delay: 180ms">
+                <p class="story-label">03 Core Challenge</p>
+                <h2 class="role-title">AI interviews cannot feel like automation running in the dark.</h2>
+                <p class="challenge-copy">
+                  Researchers need to know what the AI is doing, how the session quality is changing,
+                  and when human intervention is needed.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="cards">
-            <article class="work-card reveal">
-              <div class="card-top">
-                <div class="icon-slot">
-                  <div class="yellow-dot"></div>
-                </div>
-                <a class="demo-button" href="https://cookiy-ai-portfolio-demo.vercel.app/" target="_blank" rel="noreferrer">Try demo</a>
-              </div>
-              <h3>Product Design 0-1</h3>
-              <p>
-                Designed the end-to-end experience of the AI research platform, including user
-                flows, information architecture, dashboard experiences, and research workflows.
-              </p>
+      <section class="section trust-section">
+        <div class="inner">
+          <div class="trust-header">
+            <div class="reveal">
+              <p class="trust-label">04 Design System of Trust</p>
+              <h2 class="trust-title">Observe Room was not just a screen.</h2>
+            </div>
+            <p class="trust-copy reveal" style="--delay: 100ms">
+              <strong>Observe Room</strong> was designed as a trust layer between AI interviews and
+              human researchers. Instead of hiding automation behind a clean dashboard, it exposes
+              the signals researchers need to evaluate, intervene, and make decisions.
+            </p>
+          </div>
+
+          <div class="trust-frame reveal" style="--reveal-y: 24px">
+            <img src="assets/observe-room-trust.png" alt="Observe Room interface showing live transcript, AI follow-up, checklist, insights, and quality signals" />
+          </div>
+
+          <div class="trust-signals">
+            <article class="trust-signal reveal">
+              <span class="signal-index">01</span>
+              <h3>Live Transcript</h3>
+              <p>Researchers can follow the conversation as it happens, not after the AI has already summarized it.</p>
             </article>
-
-            <article class="work-card reveal" style="--delay: 80ms">
-              <div class="card-top">
-                <div class="icon-slot">
-                  <div class="orange-icon"></div>
-                </div>
-                <a class="pill" href="https://github.com/devin55iwl/report-everything" target="_blank" rel="noreferrer">Agent Skill</a>
-              </div>
-              <h3>Report Skill Design</h3>
-              <p>
-                Worked on prompt frameworks, workflow logic, and human-AI collaboration models for
-                features like Signal Intelligence, Adaptive Follow-ups, and Emotion Analysis.
-              </p>
+            <article class="trust-signal reveal" style="--delay: 70ms">
+              <span class="signal-index">02</span>
+              <h3>AI Behavior Monitoring</h3>
+              <p>The interface makes the AI moderator's current action, question path, and follow-up intent visible.</p>
             </article>
-
-            <article class="work-card reveal" style="--delay: 160ms">
-              <div class="card-top">
-                <div class="icon-slot triangle-icon"></div>
-                <a class="pill ghost" href="https://www.figma.com/design/tfhrrU7GYrmNbKXBvQklmA/Cookiy-AI-2026-?node-id=6-104&t=gnEC8pAiabKZaKxl-1" target="_blank" rel="noreferrer">Figma Visit</a>
-              </div>
-              <h3>Design System</h3>
-              <p>
-                Created reusable design patterns and scalable interface components supporting rapid
-                product iteration.
-              </p>
+            <article class="trust-signal reveal" style="--delay: 140ms">
+              <span class="signal-index">03</span>
+              <h3>Participant Status</h3>
+              <p>Status, recording, camera state, and session progress help researchers judge the reliability of the moment.</p>
             </article>
-
-            <article class="work-card reveal" style="--delay: 240ms">
-              <div class="card-top">
-                <div class="icon-slot logo-icon">
-                  <img src="assets/cookiy-logo.png" alt="Cookiy logo" />
-                </div>
-                <a class="pill" href="https://cookiy.ai/" target="_blank" rel="noreferrer">Cookiy.AI</a>
-              </div>
-              <h3>Product Iteration &amp; GTM</h3>
-              <p>
-                Led product iterations from concept to production. Created demos, marketing assets,
-                and customer-facing experiences supporting growth.
-              </p>
+            <article class="trust-signal reveal" style="--delay: 210ms">
+              <span class="signal-index">04</span>
+              <h3>Quality Judgment</h3>
+              <p>Signals such as sentiment, keywords, and quality scores turn raw conversation into research confidence.</p>
+            </article>
+            <article class="trust-signal reveal" style="--delay: 280ms">
+              <span class="signal-index">05</span>
+              <h3>Human Intervention</h3>
+              <p>Researchers can take action when the AI needs help, rather than treating automation as untouchable.</p>
+            </article>
+            <article class="trust-signal reveal" style="--delay: 350ms">
+              <span class="signal-index">06</span>
+              <h3>Follow-up / Signals</h3>
+              <p>Follow-up suggestions and emerging signals help teams decide what to ask next and what to verify later.</p>
             </article>
           </div>
         </div>
@@ -1478,12 +1884,13 @@
       <section class="section changed">
         <div class="inner">
           <div class="changed-title reveal">
-            <span class="section-number">11</span>
+            <span class="section-number">05</span>
             <div class="changed-copy">
-              <h2>What changed.</h2>
+              <h2>Outcome</h2>
               <p>
-                The work moved Cookiy from a promising AI research concept into a shipped product,
-                customer-facing demo system, and enterprise story that could be tested in market.
+                During a 6-month validation phase, the product supported 50,000+ entries /
+                participations in AI Moderated Interview-related flows, covering product testing,
+                customer demos, and market validation.
               </p>
             </div>
           </div>
@@ -1495,23 +1902,23 @@
                 <div class="impact-number" data-count="50000" data-suffix="+">0</div>
               </div>
               <p>
-                Participants moved through AI-moderated interview flows, turning product interaction
-                from a demo moment into repeated research infrastructure.
+                Entries / participations in AI Moderated Interview-related flows across product
+                testing, customer demos, and market validation.
               </p>
             </div>
 
             <div class="impact-stack">
               <div class="impact-card reveal" style="--delay: 80ms">
-                <div class="stat-value">0 → 1</div>
-                <p>Core product experience shipped across research setup, AI interview, observation, and reporting workflows.</p>
+                <div class="stat-value">4</div>
+                <p>Core interaction modules shipped across AI interview, observation, signals, and reporting workflows.</p>
               </div>
               <div class="impact-card stat reveal" style="--delay: 160ms">
-                <div class="stat-value" data-count="7" data-prefix="$" data-suffix="M">0</div>
-                <p>Seed funding closed while the product story and customer demo system matured.</p>
-              </div>
-              <div class="impact-card stat reveal" style="--delay: 240ms">
                 <div class="stat-value" data-count="6" data-suffix=" mo">0</div>
-                <p>From concept to enterprise-facing validation across Singapore, Germany, and North America.</p>
+                <p>Product validation phase from concept to enterprise-facing demo and market testing.</p>
+              </div>
+              <div class="impact-card reveal" style="--delay: 240ms">
+                <div class="stat-value">3</div>
+                <p>International validation regions: Singapore, Germany, and North America.</p>
               </div>
             </div>
           </div>
@@ -1523,6 +1930,61 @@
           <div class="photo-caption reveal" style="--delay: 80ms">
             <span>International customer demos and trade show validation</span>
             <span>Singapore · Germany · North America</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reflection-section">
+        <div class="inner">
+          <div class="reflection-head reveal">
+            <h2 class="reflection-display">Design Reflection</h2>
+            <p class="reflection-lead">
+              While building Cookiy, design decisions were never just visual. Each of these three
+              challenges could fill an hour on its own.
+            </p>
+          </div>
+
+          <div class="reflection-board">
+            <article class="reflection-note reveal" style="--delay: 80ms">
+              <h3>Does Every AI Startup Eventually Lose Its App?</h3>
+              <p>
+                As intelligence becomes the product itself, interfaces begin to matter less.
+              </p>
+              <p>
+                When <strong>AI-native users</strong> can simply describe outcomes, what role
+                should software still play?
+              </p>
+            </article>
+
+            <article class="reflection-note reveal" style="--delay: 150ms">
+              <h3>Enterprise Product, Consumer Dynamics?</h3>
+              <p>
+                <strong>The Skill layer</strong> created a direct relationship between an enterprise
+                platform and individual users.
+              </p>
+              <p>
+                It challenged many assumptions I had about growth, adoption, and monetization.
+              </p>
+            </article>
+
+            <article class="reflection-note reveal" style="--delay: 220ms">
+              <h3>Confidentiality vs. Visibility?</h3>
+              <p>
+                Enterprise customers demand <strong>confidentiality</strong>. Startups depend on
+                visibility.
+              </p>
+              <p>
+                Designing between <strong>trust and exposure</strong> became one of the hardest
+                parts of building a B2B product.
+              </p>
+            </article>
+
+            <div class="reflection-callout reveal" style="--delay: 300ms">
+              <p>I'd love to talk through them with you in person.</p>
+              <div class="reflection-mark" aria-hidden="true">
+                <img src="assets/dv.png" alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
