@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookiy AI - Project Introduction</title>
+    <title>Cookiy AI Case Study — Devin Wang</title>
+    <meta name="description" content="Founding Product Designer at Cookiy AI — designing a trust layer for AI-moderated research at scale." />
+    <meta property="og:title" content="Cookiy AI Case Study — Devin Wang" />
+    <meta property="og:description" content="Designing observable, controllable, and trustworthy AI interview interfaces for research teams." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/observe-room-trust.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#111111" />
     <link rel="icon" type="image/png" href="assets/cookiy-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600;700&display=swap");
 
       :root {
         --ink: #111111;
@@ -183,51 +192,6 @@
         font-weight: 600;
       }
 
-      .progress-block {
-        max-width: 520px;
-        margin-top: 42px;
-      }
-
-      .progress-meta {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 16px;
-        color: var(--soft);
-        font-family: "JetBrains Mono", monospace;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        line-height: 1;
-        text-transform: uppercase;
-      }
-
-      .progress-track {
-        position: relative;
-        height: 1px;
-        margin-top: 12px;
-        background: rgba(17, 17, 17, 0.18);
-      }
-
-      .progress-track span {
-        position: absolute;
-        inset: 0 auto 0 0;
-        width: 34%;
-        background: var(--ink);
-      }
-
-      .progress-block p {
-        display: inline-block;
-        box-decoration-break: clone;
-        -webkit-box-decoration-break: clone;
-        margin: 14px 0 0;
-        padding: 2px 5px;
-        color: var(--ink);
-        background: #dfff4f;
-        font-size: 13px;
-        line-height: 1.65;
-        font-weight: 650;
-      }
 
       .studio-actions {
         display: flex;
@@ -591,145 +555,6 @@
         font-size: 12px;
       }
 
-      .cards-section {
-        padding-bottom: 160px;
-      }
-
-      .cards-heading {
-        height: 180px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .cards-heading p {
-        max-width: 669px;
-        margin: 32px 0 0;
-        color: var(--muted);
-        font-size: 19px;
-        font-weight: 700;
-        line-height: 1.7;
-      }
-
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
-        margin-top: 16px;
-      }
-
-      .work-card {
-        min-height: 272px;
-        padding: 33px;
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        border-radius: 16px;
-        background: #fafafa;
-        transition: transform 300ms var(--ease), box-shadow 300ms var(--ease);
-      }
-
-      .work-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
-      }
-
-      .card-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-      }
-
-      .icon-slot {
-        width: 48px;
-        height: 48px;
-        display: grid;
-        place-items: center;
-        flex: 0 0 48px;
-      }
-
-      .yellow-dot {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: #ffd166;
-      }
-
-      .triangle-icon::before {
-        content: "";
-        width: 28px;
-        height: 28px;
-        background: #233a98;
-        clip-path: polygon(50% 0, 100% 100%, 0 100%);
-      }
-
-      .orange-icon {
-        width: 100%;
-        height: 100%;
-        background: #ff5a00;
-        border-radius: 4px;
-      }
-
-      .logo-icon img {
-        width: 36px;
-        height: auto;
-        object-fit: contain;
-      }
-
-      .pill,
-      .demo-button {
-        height: 40px;
-        display: inline-flex;
-        align-items: center;
-        border-radius: 999px;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
-        font-weight: 700;
-        letter-spacing: 0.44px;
-        text-transform: uppercase;
-        white-space: nowrap;
-      }
-
-      .demo-button {
-        padding-inline: 19px;
-        color: #fff;
-        border: 0;
-        background: #151515;
-        text-decoration: none;
-      }
-
-      .pill {
-        padding-inline: 16px;
-        color: #000;
-        background: #ffc484;
-        text-decoration: none;
-      }
-
-      .pill.ghost {
-        color: #747474;
-        border: 1px solid #747474;
-        background: #fff;
-      }
-
-      .work-card h3 {
-        max-width: 360px;
-        margin: 24px 0 0;
-        color: #5a5a5a;
-        font-family: "Inter", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.4;
-        letter-spacing: -0.95px;
-      }
-
-      .work-card p {
-        max-width: 340px;
-        margin: 12px 0 0;
-        color: #a1a1a1;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-        line-height: 1.625;
-      }
 
       .story-section {
         padding-top: 118px;
@@ -1286,18 +1111,6 @@
         }
       }
 
-      @keyframes rotateReverse {
-        to {
-          transform: rotate(-360deg);
-        }
-      }
-
-      @keyframes rotateForward {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
       @keyframes slideInDisplay {
         from {
           opacity: 0;
@@ -1449,11 +1262,6 @@
           font-size: 17px;
         }
 
-        .progress-meta {
-          display: grid;
-          gap: 8px;
-        }
-
         .studio-actions {
           display: grid;
           grid-template-columns: 1fr;
@@ -1529,7 +1337,6 @@
           flex-direction: column;
         }
 
-        .cards-section,
         .changed,
         .story-section,
         .trust-section,
@@ -1654,6 +1461,45 @@
           flex-direction: column;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+
+        .reveal,
+        .section-fade {
+          opacity: 1 !important;
+          transform: none !important;
+          filter: none !important;
+        }
+      }
+
+      .insight-card {
+        transition: opacity 180ms var(--ease), transform 180ms var(--ease);
+      }
+
+      .studio-button {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .studio-button::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: currentColor;
+        opacity: 0;
+        transition: opacity 200ms var(--ease);
+      }
+
+      .studio-button:hover::after {
+        opacity: 0.06;
+      }
     </style>
   </head>
   <body>
@@ -1677,15 +1523,9 @@
                       I design and prototype AI-native products that turn messy human signals into
                       clear, usable systems.
                     </p>
-                    <div class="progress-block" aria-label="Personal website progress">
-                      <div class="progress-meta">
-                        <span>Personal website in progress</span>
-                        <span>34 / 100</span>
-                      </div>
-                      <div class="progress-track" aria-hidden="true">
-                        <span></span>
-                      </div>
-                      <p>This personal website is still being updated.</p>
+                    <div class="studio-actions">
+                      <a class="studio-button" href="#work">Case Study ↓</a>
+                      <a class="studio-button secondary" href="https://devinwang.net/" target="_blank" rel="noreferrer">More Work</a>
                     </div>
                   </div>
                 </div>
@@ -1784,7 +1624,7 @@
             </p>
           </div>
           <div class="screenshot-frame reveal" style="--reveal-y: 24px">
-            <img src="assets/dashboard.png" alt="Research dashboard, signal view" />
+            <img src="assets/dashboard.png" alt="Research dashboard, signal view" loading="lazy" decoding="async" />
           </div>
           <div class="caption reveal" style="--delay: 80ms">
             <span>Fig. 01 — Research dashboard, signal view</span>
@@ -1843,7 +1683,7 @@
           </div>
 
           <div class="trust-frame reveal" style="--reveal-y: 24px">
-            <img src="assets/observe-room-trust.png" alt="Observe Room interface showing live transcript, AI follow-up, checklist, insights, and quality signals" />
+            <img src="assets/observe-room-trust.png" alt="Observe Room interface showing live transcript, AI follow-up, checklist, insights, and quality signals" loading="lazy" decoding="async" />
           </div>
 
           <div class="trust-signals">
@@ -1925,7 +1765,7 @@
 
           <div class="separator"></div>
           <div class="team-photo reveal" style="--reveal-y: 24px">
-            <img src="assets/team.png" alt="Team at work" />
+            <img src="assets/team.png" alt="Team at work" loading="lazy" decoding="async" />
           </div>
           <div class="photo-caption reveal" style="--delay: 80ms">
             <span>International customer demos and trade show validation</span>
