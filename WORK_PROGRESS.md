@@ -1,6 +1,6 @@
 # Cookiy Motion HTML - Work Progress
 
-Last updated: 2026-06-17
+Last updated: 2026-06-18
 
 ## Project Purpose
 
@@ -37,38 +37,27 @@ http://127.0.0.1:8765/
 The current case study is organized as:
 
 1. Cookiy case-study hero
-   - Main title: "Cookiy AI"
-   - Secondary line: "Designing Trust into AI-Native Research"
-   - Devin appears as a byline, not the primary headline.
-   - The right-side editorial card is a static `Case Focus` card explaining why AI interviews cannot be a black box.
+   - Uses the Cookiy wordmark as the main visual identity.
+   - Secondary line: "Designing trust into AI-native research."
+   - Devin appears as a byline: `Devin Wang · Founding Product Designer`.
+   - Uses `assets/hero-tradeshow.png` to immediately show live market/customer validation.
 
-2. Product visual proof
-   - Title: "Making AI interviews observable."
-   - Shows the Cookiy product/device composition.
-   - Focus: making AI behavior visible enough for researchers to evaluate quality and intervene.
+2. Thesis and brief
+   - Main thesis: "Researchers couldn't trust what they couldn't see."
+   - Compact meta strip: role, product, scope, and evidence links.
+   - Keeps Figma, Agent Skill, and Live Product links visible as proof points.
 
-3. `01 Context`
-   - Explains the research workflow:
-     discussion guide creation, participant recruitment, AI-moderated interviews, observation, insight generation, and reporting.
+3. Product visual proof
+   - Shows the Cookiy product/device composition using `orb-mask.svg`, monitor assets, and `ipad-complete.png`.
+   - Includes the trade-show/customer demo photo below the device composition.
 
-4. `02 My Role` and `03 Core Challenge`
-   - Role: Founding Product Designer.
-   - Scope: AI workflow design, complex states, core modules, interactive demos, and customer-facing presentation experiences.
-   - Core challenge: AI interviews cannot feel like automation running in the dark.
-
-5. `04 Design System of Trust`
+4. `Observe Room`
    - The main case-study section.
    - Uses `assets/observe-room-trust.png`.
    - Frames Observe Room as a trust layer, not just a dashboard.
-   - Trust signals include:
-     - Live Transcript
-     - AI Behavior Monitoring
-     - Participant Status
-     - Quality Judgment
-     - Human Intervention
-     - Follow-up / Signals
+   - Focuses on session state, AI intent surfaced, verbatim transcript, and quality in real time.
 
-6. `05 Outcome`
+5. `Outcome`
    - Uses bounded language for the metrics:
      - `50,000+ entries / participations`
      - `4 core modules shipped`
@@ -76,15 +65,15 @@ The current case study is organized as:
      - International demos across Singapore, Germany, and North America
    - Keep the boundary language. Do not rewrite this as if Devin personally generated all users.
 
-7. `Design Reflection`
-   - Editorial closing section with three reflection prompts:
+6. `Reflection`
+   - Opens with a conversational callout and `assets/pet.svg`.
+   - Includes a "What I'd do differently" note.
+   - Keeps two reflection prompts:
      - Does Every AI Startup Eventually Lose Its App?
-     - Enterprise Product, Consumer Dynamics?
      - Confidentiality vs. Visibility?
    - This section is intentionally quieter than the main case sections. It should feel like an afterword, not a second hero.
-   - Ends with a callout using `assets/dv.png`.
 
-8. Old website link
+7. Old website link
    - Links to https://devinwang.net/
 
 ## Important Links
@@ -110,11 +99,13 @@ Preserve the current portfolio voice:
 
 Recent design decisions:
 
+- The 2026-06-18 refinement moved the page toward a more recruiter-readable product case: Cookiy wordmark, trade-show proof image, concise thesis, and stronger Observe Room evidence.
+- `uploads/` from the refinement zip is intentionally not deployed. It contains redundant backups and a nested asset zip.
+- `support.js` and `Cookiy AI Case Study.dc.html` are kept in the repository as source/runtime artifacts from the exported package, but `index.html` is the deployed GitHub Pages entry.
 - The hero was changed from a personal homepage opening to a project-first Cookiy AI case-study opening.
 - The old rotating Daily AI Design Note card was replaced with a static Case Focus card.
 - `Design Reflection` was visually reduced so it supports the case instead of overpowering Observe Room.
 - The old CSS-made `DV` pixel mark in the reflection callout was replaced with `assets/dv.png`.
-- The PNG should stay attached to the lower-right edge of the reflection callout.
 - A favicon link now points to `assets/cookiy-logo.png` to avoid a missing favicon request.
 
 ## Content Guardrails
